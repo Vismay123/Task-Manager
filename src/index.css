@@ -1,13 +1,100 @@
 body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #2575fc);
+  color: #fff;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 40px;
+  border-radius: 15px;
+  width: 300px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
+
+.container h2 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.container input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+}
+
+.container button {
+  width: 100%;
+  padding: 10px;
+  background: #ffffff;
+  color: #2575fc;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.container p {
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+a {
+  color: #fff700;
+  text-decoration: none;
+}
+
+.task-form, .task-list, .navbar {
+  margin: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+button {
+  margin: 5px;
+}
+
+.task.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Styling the dropdown */
+.task-form select {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Custom arrow (optional for better style) */
+.task-form select:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional smoother interaction */
+.task-form select:hover {
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+

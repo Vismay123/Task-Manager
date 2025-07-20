@@ -1,0 +1,217 @@
+/* Main wrapper */
+.dashboard-wrapper {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg,#2575fc);
+  min-height: 100vh;
+  color: white;
+}
+
+/* Sticky Header */
+.header-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2%;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg,#2575fc);
+  padding: 20px 40px;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.dashboard-title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.logout-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: white;
+  left: auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Container starts after header */
+.dashboard-container {
+  padding-top: 250px; /* Important: space for header */
+  display: flex;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Main content */
+.main-dashboard {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Form and task box */
+.form-container,
+.task-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Form fields */
+.task-form input,
+.task-form textarea,
+.task-form button {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Add Task button */
+.task-form button {
+  background: #ffcd3c;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.task-form button:hover {
+  background: #ffd93c;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filters button {
+  flex: 1;
+  margin: 0 5px;
+  background: #ffffff30;
+  border: none;
+  color: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filters button:hover {
+  background: #ffffff50;
+}
+
+/* Task list */
+.task-list {
+  max-height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.task.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.task button {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.task button:first-of-type {
+  background: #58d68d;
+  color: #000;
+}
+
+.task button:last-of-type {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.notification-panel {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 15px;
+  color: white;
+}
+
+.notification {
+  margin-bottom: 10px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.notification.read {
+  opacity: 0.6;
+}
+
+.notification button {
+  margin-top: 8px;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #ffcd3c;
+  color: black;
+}
+.notifications-container {
+  max-height: 200px;
+  overflow-y: auto;
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .header-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .dashboard-title {
+    font-size: 24px;
+  }
+
+  .logout-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}
